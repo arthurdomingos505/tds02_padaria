@@ -18,6 +18,8 @@ namespace backPadaria
 
         public Cliente(string nome, string cpf, string telefone, string endereco, int pontos)
         {
+            if (this.nome == "") throw new Exception("O nome do cliente não pode ser vazio!");
+
             this.nome = nome;
             this.cpf = cpf;
             this.telefone = telefone;
@@ -38,7 +40,7 @@ namespace backPadaria
         public void AdicionarPontos(int pontos)
         {
             this.pontos += pontos;
-        }
+        } 
 
     }
 }
